@@ -46,85 +46,89 @@ const EditProduct = () => {
 
   return (
     <>
-      <h2 id="add-title">Редактирование товара</h2>
-      <form id="form-add" onSubmit={(e) => handleSave(e)}>
-        <TextField
-          className="outlined-basic"
-          label="Категория"
-          variant="outlined"
-          name="category"
-          value={inpValues.category}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Название"
-          variant="outlined"
-          name="title"
-          value={inpValues.title}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Модель"
-          variant="outlined"
-          name="model"
-          value={inpValues.model}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Описание"
-          variant="outlined"
-          name="description"
-          value={inpValues.description}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Цвет"
-          variant="outlined"
-          name="color"
-          value={inpValues.color}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Цена"
-          variant="outlined"
-          name="price"
-          type="number"
-          value={+inpValues.price}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Фото 1"
-          variant="outlined"
-          name="img1"
-          value={inpValues.img1}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Фото 2"
-          variant="outlined"
-          name="img2"
-          value={inpValues.img2}
-          onChange={(e) => handleChange(e)}
-        />
-        <TextField
-          className="outlined-basic"
-          label="Фото 3"
-          variant="outlined"
-          name="img3"
-          value={inpValues.img3}
-          onChange={(e) => handleChange(e)}
-        />
-        <Button variant="contained" type="submit">
-          Сохранить
-        </Button>
-      </form>
+      {productDetails ? (
+        <>
+          <h2 id="add-title">Редактирование товара</h2>
+          <form id="form-add" onSubmit={(e) => handleSave(e)}>
+            <TextField
+              className="outlined-basic"
+              label="Категория"
+              variant="outlined"
+              name="category"
+              value={inpValues.category}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Название"
+              variant="outlined"
+              name="title"
+              value={inpValues.title}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Модель"
+              variant="outlined"
+              name="model"
+              value={inpValues.model}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Описание"
+              variant="outlined"
+              name="description"
+              value={inpValues.description}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Цвет"
+              variant="outlined"
+              name="color"
+              value={inpValues.color}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Цена"
+              variant="outlined"
+              name="price"
+              type="number"
+              value={+inpValues.price}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Фото 1"
+              variant="outlined"
+              name="img1"
+              value={inpValues.img1}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Фото 2"
+              variant="outlined"
+              name="img2"
+              value={inpValues.img2}
+              onChange={(e) => handleChange(e)}
+            />
+            <TextField
+              className="outlined-basic"
+              label="Фото 3"
+              variant="outlined"
+              name="img3"
+              value={inpValues.img3}
+              onChange={(e) => handleChange(e)}
+            />
+            <Button variant="contained" type="submit">
+              Сохранить
+            </Button>
+          </form>
+        </>
+      ) : null}
     </>
   );
 };
